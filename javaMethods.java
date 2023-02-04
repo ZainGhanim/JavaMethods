@@ -2,13 +2,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main{
-    public static ArrayList<String> merge(String[] words, String[] more){
-        ArrayList<String> listArray = new ArrayList<>();
-        for (String w : words) listArray.add(w);
-        for(String w : more) listArray.add(w);
-        return listArray;
+    
+    //created an ArrayList that took "words" and "more" as parameters and concated them using two for loops.
+    public static ArrayList<String> merge(String[] words, String[] more){ //syntax for creating the method merge of type ArrayList<String>
+        ArrayList<String> listArray = new ArrayList<>(); //syntax for creating ArrayList listArray that will take both our String Arrays
+        for (String w : words) listArray.add(w); //for loop to populate our listArray with the first element of words
+        for(String w : more) listArray.add(w); //for loop to populate our listArray with the first element of more
+        return listArray; //return listArray
     }
-    public static int[] combine(int[] input){
+    
+    //Created a method that takes an int array, for instance, {1,2,9}, and adds one to that so that it reads: {1,3,0}
+    public static int[] arrayAddOne(int[] input){ //Syntax for creating the method arrayAddOne
         if(input.length == 0){
             System.out.println("is empty");
         }
@@ -76,21 +80,25 @@ public class Main{
     }
 
     public static void main(String[] args) {
-        //String[] array = {"this"," is"," my"," test"};
-        //String[] info = {"info"," to"," be"," used"};
-        //ArrayList<String> result = merge(array,info);
-        //System.out.println(result);
-        //int[] use = {8,1};
-        //int[] result = combine(use);
-        //System.out.println(Arrays.toString(result));
-        //int[] use = {1,2,3,4,5};
-        //int[] result = nSum(use,5);
-        //System.out.println(Arrays.toString(result));
-        //int[] use = {0,2,0,4};
-        //int[] result = twoSum(use,6);
-        //System.out.println(Arrays.toString(result));
-        int test = 12314;
-        boolean result = isPalindrome(test);
+        String[] array = {"this"," is"," my"," test"};
+        String[] info = {"info"," to"," be"," used"};
+        ArrayList<String> result = merge(array,info);
         System.out.println(result);
+        
+        int[] use = {8,1};
+        int[] result = arrayAddOne(use);
+        System.out.println(Arrays.toString(result));
+        
+        int[] use2 = {1,2,3,4,5};
+        int[] result2 = nSum(use2,5);
+        System.out.println(Arrays.toString(result2));
+        
+        int[] use3 = {0,2,0,4};
+        int[] result3 = twoSum(use3,6);
+        System.out.println(Arrays.toString(result3));
+        
+        int test = 12314;
+        boolean result4 = isPalindrome(test);
+        System.out.println(result4);
     }
 }
