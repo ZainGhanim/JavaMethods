@@ -562,7 +562,6 @@ public class Main{
         ListNode three = new ListNode(-1,null);
         ListNode pointer3 = three;
         i = 1;
-
         while(one.next != null && two.next != null){
             if(i % 2 == 0){
                 pointer3.next = two.next;
@@ -579,11 +578,9 @@ public class Main{
         if(one.next != null){
             pointer3.next = one.next;
         }
-        
         if(two.next != null){
             pointer3.next = two.next;
         }
-
         return three.next;
     }
     
